@@ -392,8 +392,9 @@ function sendRequest(reference, userId) {
 
 function sendEmailLink(reference) {
     let mailBody = reference;
-    let mailtoUrl = `mailto:牛牛君@睁大眼看清楚.Argun?subject=Moniepoint Reference&body=${mailBody}`;
-    I.msg(I.name, mailBody, "📧发送到邮箱复制", mailtoUrl);
+    I.msg(I.name, "已使用全自动过人脸 ✌️", reference);
+    // let mailtoUrl = `mailto:牛牛君@睁大眼看清楚.Argun?subject=Moniepoint Reference&body=${mailBody}`;
+    // I.msg(I.name, mailBody, "📧发送到邮箱复制", mailtoUrl);
     $done({body});
 }
 
@@ -440,11 +441,12 @@ try {
     if (obj.reference && obj.provider === "SMILE_ID") {
         // 检查当前环境是否是Surge
         sendEmailLink(obj.reference);
+        // sendRequest(obj.reference, obj.userId);
         // if (I.platform() === "Surge") {
         //     // 如果存在userId，则发起请求，否则发送邮件
         //     if (obj.userId) {
         //         console.log(`userId`, obj.userId);
-        //         sendRequest(obj.reference, obj.userId);
+        //         
         //     } else {
         //         sendEmailLink(obj.reference);
         //     }
