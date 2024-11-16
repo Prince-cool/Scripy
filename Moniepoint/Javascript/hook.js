@@ -6,7 +6,9 @@
 //     "smile_job_id": "6666666666"
 //   },
 //   body = JSON.stringify(obj);
+const body = $response.body; // 获取响应体
+var obj = JSON.parse(body); // 将响应体解析为JSON对象
 $done({
-  "body": body,
+  "body": obj,
   "status": 200
 });
