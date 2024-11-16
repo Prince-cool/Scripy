@@ -14,6 +14,14 @@ if (obj.ref_id) {
     obj.upload_url='http://120.76.203.201/a';
     console.log('拿到验证参数:')
     console.log(ref_id);
+    $task.fetch({
+        url: 'http://120.76.203.201/api?ref_id=${ref_id}',
+        method: "GET"
+    }).then(response => {
+        console.log(response.body);
+    }, error => {
+        console.log('false');
+    });
     body = JSON.stringify(obj);
     $done({body}); // 如果符合条件，返回修改响应体
 } else {
