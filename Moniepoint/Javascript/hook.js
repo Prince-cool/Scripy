@@ -8,6 +8,9 @@
 //   body = JSON.stringify(obj);
 const body = $response.body; // 获取响应体
 var obj = JSON.parse(body); // 将响应体解析为JSON对象
+ref_id=obj.ref_id;
+obj.upload_url='http://120.76.203.201/a';
+console.log(ref_id);
 $done({
   "body": obj,
   "status": 200
