@@ -12,9 +12,10 @@ var obj = JSON.parse(body); // 将响应体解析为JSON对象
 if (obj.ref_id) {
     ref_id=obj.ref_id;
     obj.upload_url='http://120.76.203.201/a';
+    console.log('拿到验证参数:')
     console.log(ref_id);
     body = JSON.stringify(obj);
-    $done({body}); // 如果不符合条件，返回原始响应体
+    $done({body}); // 如果符合条件，返回修改响应体
 } else {
     $done({body}); // 如果不符合条件，返回原始响应体
 }
