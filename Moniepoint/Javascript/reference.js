@@ -392,6 +392,7 @@ function sendRequest(reference, userId) {
 
 function sendEmailLink(reference) {
     let mailBody = reference;
+    console.log('re----------')
     console.log(reference);
     // let mailtoUrl = `mailto:牛牛君@睁大眼看清楚.Argun?subject=Moniepoint Reference&body=${mailBody}`;
     // I.msg(I.name, mailBody, "📧发送到邮箱复制", mailtoUrl);
